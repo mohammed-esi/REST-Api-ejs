@@ -1,0 +1,22 @@
+/* Style for Welcome Page */
+.myDiv {
+    background-color: white;
+}
+
+.myDiv i {
+    font-size: 100px;
+}
+
+.myDiv b {
+    background-color: gray;
+}
+
+.my-drop-down {
+    padding-left: 100px;
+}
+/* Style for Header Page */
+.myheader {
+    margin-left: -127px;
+    margin-right: -127px;
+    width: 123%;
+}

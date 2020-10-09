@@ -1,0 +1,51 @@
+<div class="myheader">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">All in <b>One</b></a>
+        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+            <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/articles">Articles</a>
+                    </li>
+                <% if (user) { %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/article/add">Add Article</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/users/dashboard">Dashboard</a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <% if (user) { %>
+                    <li class="nav-item">
+                        <div class="dropdown my-drop-down">
+                            <a class="btn btn-secondary dropdown-toggle" href="/" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <%= user.name %>
+                            </a>
+                        
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="/users/edit_profile">Edit Profile</a>
+                            <a class="dropdown-item" href="#">Edit Picture</a>
+                            <a class="dropdown-item" href="#">Edit Password</a>
+                            <hr>
+                            <a class="dropdown-item" href="/users/logout">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                <% } else { %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/users/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/users/register">Register</a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </nav>
+</div>

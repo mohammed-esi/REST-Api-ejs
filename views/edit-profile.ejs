@@ -1,0 +1,30 @@
+<% include ./partiale/header %>
+<div>
+    <h1><%= title %></h1>
+    <form action="/users/edit_profile" method="POST">
+        <div class="form-group">
+        <label for="name">Name</label>
+        <input
+            type="name"
+            id="name"
+            name="name"
+            class="form-control"
+            placeholder="Enter Name"
+            value="<%= user.name %>"/>
+        </div>
+        <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                placeholder="Enter Name"
+                value="<%= user.email %>"/>
+            </div>
+        <button type="submit" class="btn btn-dark btn-block">
+        Update
+        </button>
+    </form>
+</div>
+<% include ./partiale/footer %>
